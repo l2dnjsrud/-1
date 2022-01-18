@@ -18,3 +18,4 @@ class MulLayer:
         dy = dout * self.x
 
         return dx, dy
+        
