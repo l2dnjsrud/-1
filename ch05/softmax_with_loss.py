@@ -1,5 +1,5 @@
-from turtle import forward
-
+import sys, os
+sys.path.append(os.pardir)
 from common.functions import cross_entropy_error, softmax
 
 
