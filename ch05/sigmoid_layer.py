@@ -11,7 +11,7 @@ class sigmoid:
 
     def forward(self, x):
         out = 1 / (1 + np.exp(-x))
-        self.out = out
+        self.out = out                #순전파의 출력을 인스턴스 변수 out에 보관
 
         return out
 
