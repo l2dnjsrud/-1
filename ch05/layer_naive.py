@@ -30,4 +30,5 @@ class AddLayer:
     def backward(self):
         dx = dout * 1
         dy = dout * 1
+        
         return dx, dy       
