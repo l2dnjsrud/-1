@@ -27,8 +27,8 @@ class AddLayer:
         out = x + y
         return out
 
-    def backward(self):
+    def backward(self, dout):
         dx = dout * 1
         dy = dout * 1
-        
+
         return dx, dy       
