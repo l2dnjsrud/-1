@@ -37,9 +37,9 @@ for i in range(hidden_layer_size):
 
 
     # 활성화 함수도 바꿔가며 실험해보자！
-    #z = sigmoid(a)
-    z = ReLU(a)
-    # z = tanh(a)
+    # z = sigmoid(a)
+    # z = ReLU(a)
+    z = tanh(a)
 
     activations[i] = z
 
@@ -52,4 +52,4 @@ for i, a in activations.items():
     # plt.ylim(0, 7000)
     plt.hist(a.flatten(), 30, range=(0,1))
 plt.show()
-plt.savefig('weight_init_activation_histogram1.png')
+plt.savefig('weight_init_activation_histogram2.png')
