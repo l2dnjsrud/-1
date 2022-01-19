@@ -27,7 +27,9 @@ for i in range(hidden_layer_size):
         x = activations[i-1]
 
     # 초깃값을 다양하게 바꿔가며 실험해보자！
-    w = np.random.randn(node_num, node_num) * 1
+    node_num = 100
+    w = np.random.randn(node_num, node_num) / np.sqrt(node_num)
+    # w = np.random.randn(node_num, node_num) * 1
     # w = np.random.randn(node_num, node_num) * 0.01
     # w = np.random.randn(node_num, node_num) * np.sqrt(1.0 / node_num)
     # w = np.random.randn(node_num, node_num) * np.sqrt(2.0 / node_num)
@@ -48,8 +50,8 @@ for i, a in activations.items():
     plt.subplot(1, len(activations), i+1)
     plt.title(str(i+1) + "-layer")
     if i != 0: plt.yticks([], [])
-    # plt.xlim(0.1, 1)
-    # plt.ylim(0, 7000)
+    plt.xlim(0.1, 1)
+    plt.ylim(0, 7000)
     plt.hist(a.flatten(), 30, range=(0,1))
 plt.show()
-plt.savefig('weight_init_activation_histogram3.png')
+plt.savefig('weight_init_activation_histogram_xavier1.png')
