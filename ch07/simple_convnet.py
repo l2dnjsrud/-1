@@ -1,10 +1,11 @@
+# coding: utf-8
+import sys, os
+sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록 설정
+import pickle
+import numpy as np
 from collections import OrderedDict
-from multiprocessing import pool
-from random import random
-import re
-from ch07.pooling import Pooling
-from common.layers import Affine, Convolution, Relu, SoftmaxWithLoss
-from common.util import conv_output_size
+from common.layers import *
+from common.gradient import numerical_gradient
 
 
 class SimpleConvNet:
